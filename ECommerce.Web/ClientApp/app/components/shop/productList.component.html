@@ -1,0 +1,22 @@
+﻿
+<div class="row">
+    <div class='row'>
+        <div class='col-sm-2'>Filter by:</div>
+        <div class='col-sm-4'>
+            <input type='text' [(ngModel)]='listFilter' />
+        </div>
+    </div>
+</div>
+<div class="row">
+
+    <div class="product-info col-sm-4 well well-sm" *ngFor="let p of displayProducts">
+        <div>
+            <strong>Title</strong>:<a [routerLink]="['/products',p.id]">{{ p.title }}</a>
+        </div>
+            <!--<div><strong>Title</strong>: {{ p.title }}</div>-->
+            <div><strong>CategoryName</strong>:{{ p.categoryName }} </div>
+            <div><strong>Price</strong>: {{ p.price | currency:"USD":true }}</div>
+            <!--<div><strong>Description</strong>:<div class="product-description">{{ p.description }}</div> </div>-->
+            <button id="buyButton" class="btn btn-success btn-sm pull-right" (click)="addProduct(p)">Buy</button>
+        </div>
+</div>

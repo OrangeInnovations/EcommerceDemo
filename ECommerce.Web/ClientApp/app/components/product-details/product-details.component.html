@@ -1,0 +1,22 @@
+﻿
+<div class="nav navbar-btn">
+    <a [routerLink]="['/Shop']">Back to shop</a>
+</div>
+<div>
+    <div><strong>CategoryName</strong>:{{ product.categoryName }} </div>
+    <div><strong>Title</strong>: {{ product.title }}</div>
+    <div><strong>Price</strong>: {{ product.price | currency:"USD":true }}</div>
+    <div><strong>Description</strong>:<div>{{ product.description }}</div> </div>
+</div>
+
+<div class="row">
+
+    <div class="col-sm-12 well well-sm" *ngFor="let review of product.reviewList">
+        <div>
+            <strong>Review Content</strong>:<p class="comment">{{ review.reviewContent }}</p>
+        </div>
+       
+        <div><strong>Reviewer Name</strong>:{{ review.reviewerFullName }} </div>
+        <div><strong>Date</strong>: {{ review.createDateTimeOffset | date:'yyyy-MM-dd HH:mm' }} </div>
+    </div>
+</div>
