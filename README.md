@@ -41,7 +41,7 @@ The sample covers the full statck devloper as the following:
 From your shell or command line:
 
 ```
-git clone 
+git clone https://github.com/OrangeInnovations/EcommerceDemo.git
 ```
 
 ### Step 2: Check nodejs, node are installed correctly
